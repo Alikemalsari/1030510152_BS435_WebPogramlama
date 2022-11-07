@@ -3,4 +3,4 @@
  Öğrenci Adı: Ali Kemal SARI
  
  
- Ders Adı: BS435Web Programlama
+ Ders Adı: BS435 Web Programlama
