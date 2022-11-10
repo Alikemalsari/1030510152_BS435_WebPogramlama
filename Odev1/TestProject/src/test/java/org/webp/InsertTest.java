@@ -53,7 +53,7 @@ public class InsertTest {
     public void Dersler() {
 
         Dersler dersler = new Dersler();
-        dersler.setId(1L);
+
 
         boolean persisted = persistInATransaction(dersler);
         assertTrue(persisted);
@@ -63,7 +63,7 @@ public class InsertTest {
     public void Ogrenci() {
 
         Ogrenci ogrenci = new Ogrenci();
-        ogrenci.setId(2L);
+
 
         boolean persisted = persistInATransaction(ogrenci);
         assertTrue(persisted); // "Song" adında bir tablo yok
@@ -73,7 +73,7 @@ public class InsertTest {
     public void Obisis() {
 
         Obisis obisis = new Obisis();
-        obisis.setId(1L);
+
 
         boolean persisted = persistInATransaction(obisis);
         assertTrue(persisted);

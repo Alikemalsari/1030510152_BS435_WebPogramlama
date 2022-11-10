@@ -2,22 +2,32 @@ package org.webp;
 
 import javax.persistence.*;
 
+
 @Table(name = "Obisis")
 @Entity
 public class Obisis {
 
-    @Column(name = "ID") @GeneratedValue
+    public Obisis(){}
+
+    @Column(name = "ID") //@GeneratedValue
     @Id
     private Long id;
 
     @Column(name = "OgrAdiSoyadi")
-    private int OgrAdiSoyadi;
+    @OneToMany
+
+    private Ogrenci OgreAdiSoyadi;
+
 
     @Column(name = "DersAdi")
-    private int DersAdi;
+    @OneToMany
 
+    private Dersler DersAdi;
+
+    @OneToMany
     @Column(name = "Kredi")
-    private int DersKredisi;
+
+    private Dersler DersKredisi;
 
     public Long getId() {
         return id;
@@ -27,27 +37,52 @@ public class Obisis {
         this.id = id;
     }
 
+    public Ogrenci getOgreAdiSoyadi() {
+        return OgreAdiSoyadi;
+    }
+
+    public void setOgreAdiSoyadi(Ogrenci ogreAdiSoyadi) {
+        OgreAdiSoyadi = ogreAdiSoyadi;
+    }
+
+/*
     public int getOgrAdiSoyadi() {
         return OgrAdiSoyadi;
     }
 
     public void setOgrAdiSoyadi(int ogrAdiSoyadi) {
         OgrAdiSoyadi = ogrAdiSoyadi;
-    }
-
+    }*/
+/*
     public int getDersAdi() {
         return DersAdi;
     }
 
     public void setDersAdi(int dersAdi) {
         DersAdi = dersAdi;
+    }*/
+
+    public Dersler getDersAdi() {
+        return DersAdi;
     }
 
+    public void setDersAdi(Dersler dersAdi) {
+        DersAdi = dersAdi;
+    }
+/*
     public int getDersKredisi() {
         return DersKredisi;
     }
 
     public void setDersKredisi(int dersKredisi) {
+        DersKredisi = dersKredisi;
+    }*/
+
+    public Dersler getDersKredisi() {
+        return DersKredisi;
+    }
+
+    public void setDersKredisi(Dersler dersKredisi) {
         DersKredisi = dersKredisi;
     }
 }

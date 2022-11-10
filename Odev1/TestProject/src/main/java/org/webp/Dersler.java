@@ -2,10 +2,13 @@ package org.webp;
 
 import javax.persistence.*;
 
+
 @Table(name = "Dersler")
 @Entity
 public class Dersler {
-    @OneToMany
+
+public Dersler(){}
+
     @Column(name = "ID") @Id
     @GeneratedValue
     private Long id;

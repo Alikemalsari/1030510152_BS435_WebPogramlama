@@ -1,15 +1,21 @@
 package org.webp;
 
 
-import com.sun.tools.javac.comp.Resolve;
+//import com.sun.tools.javac.comp.Resolve;
+
 
 import javax.persistence.*;
+
+
+
 
 @Table(name = "Ogrenci")
 @Entity
 public class Ogrenci {
 
-    @OneToMany
+
+    public Ogrenci(){}
+
     @Column(name = "ID") @Id
     @GeneratedValue
     private Long id;
