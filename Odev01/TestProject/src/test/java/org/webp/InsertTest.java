@@ -50,33 +50,20 @@ public class InsertTest {
 
 /**/
     @Test
-    public void Dersler() {
+    public void insertDersler() {
 
         Dersler dersler = new Dersler();
 
 
-        boolean persisted = persistInATransaction(dersler);
-        assertTrue(persisted);
     }
 
     @Test
-    public void Ogrenci() {
+    public void insertOgrenci() {
 
         Ogrenci ogrenci = new Ogrenci();
 
-
-        boolean persisted = persistInATransaction(ogrenci);
-        assertTrue(persisted); // "Song" adında bir tablo yok
     }
 
-    @Test
-    public void Obisis() {
 
-        Obisis obisis = new Obisis();
-
-
-        boolean persisted = persistInATransaction(obisis);
-        assertTrue(persisted);
-    }
 
 }
